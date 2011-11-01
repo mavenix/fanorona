@@ -1,0 +1,6 @@
+?package(fanorona):needs="X11"\
+	section="Games/Board"\
+	title="Fanorona"\
+	command="/usr/games/fanorona -s"\
+	longtitle="Board game from Madagascar"\
+	icon="/usr/share/pixmaps/fanorona.xpm"

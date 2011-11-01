@@ -1,0 +1,15 @@
+homepage: http://home.gna.org/fanorona/
+project page: https://gna.org/projects/fanorona/
+stones artwork (button-*-benji_park_01.png) from http://www.openclipart.org
+
+dependencies:
+ - python >= 2.4
+ - python-numeric
+ - python-pygame
+
+optional:
+ - subversion
+ - subversion-tools
+ - devscripts
+ - xsltproc (generate ChangeLog from subversion)
+ - gettext (generate the compiled files .mo from .po)

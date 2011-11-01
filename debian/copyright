@@ -1,0 +1,62 @@
+This package was debianized by Randrianiriana Soloniaina Thierry <randrianiriana@gmail.com> on
+Thu, 23 Aug 2007 07:03:42 +0300.
+
+It was downloaded from http://home.gna.org/fanorona/
+
+Upstream Authors:
+  Thierry Randrianiriana <randrianiriana@gmail.com>
+
+Licenses:
+
+	Copyright (C) 2007 Thierry Randrianiriana <randrianiriana@gmail.com>
+
+	This program is free software; you can redistribute it and/or modify
+  	it under the terms of the GNU General Public License as published by
+  	the Free Software Foundation; either version 2 of the License, or
+  	(at your option) any later version.
+
+  	This program is distributed in the hope that it will be useful,
+  	but WITHOUT ANY WARRANTY; without even the implied warranty of
+  	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  	GNU General Public License for more details.
+
+  	You should have received a copy of the GNU General Public License
+  	along with this package; if not, write to the Free Software
+  	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+
+The files data/*.png are
+    creative commons Public Domain Dedication
+
+    Copyright-Only Dedication (based on United States law) or Public Domain
+    Certification
+
+    The person or persons who have associated work with this document (the
+    "Dedicator" or "Certifier") hereby either (a) certifies that, to the best
+    of his knowledge, the work of authorship identified is in the public
+    domain of the country from which the work is published, or (b) hereby
+    dedicates whatever copyright the dedicators holds in the work of authorship
+    identified below (the "Work") to the public domain. A certifier, morever,
+    dedicates any copyright interest he may have in the associated work, and
+    for these purposes, is described as a "dedicator" below.
+
+    A certifier has taken reasonable steps to verify the copyright status of
+    this work. Certifier recognizes that his good faith efforts may not shield
+    him from liability if in fact the work certified is not in the public domain.
+
+    A dedicator makes this dedication for the benefit of the public at large and
+    to the detriment of the Dedicator's heirs and successors. Dedicators intend
+    this dedication to be an overt act of relinquishment in perpetuity of all
+    present and future rights under copyright law, whether vested or contingent,
+    in the Work. Dedicator understand that such relinquishment of all rights
+    includes the relinquishment of all rights to enforce (by lawsuit or otherwise)
+    those copyrights in the Work.
+
+    Dedicator recognizes that, once placed in the public domain, the Work may be
+    freely reproduced, distributed, transmitted, used, modified, built upon, or
+    otherwise exploited by anyone for any purpose, commercial or non-commercial,
+    and in any way, including by methods that have not yet been invented or
+    conceived.
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in /usr/share/common-licenses/GPL.

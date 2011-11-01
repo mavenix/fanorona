@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+#
+# fanorona
+# Copyright (C) Thierry Randrianiriana 2007 <randrianiriana@gmail.com>
+#
+# fanorona is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# fanorona is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# $Id: fanorona 55 2008-01-02 07:26:39Z gassla $
+
+from optparse import OptionParser
+from fanorona.Main import Main
+from fanorona.const import *
+
+parser = OptionParser(version="@VERSION@")
+parser.add_option("-s","--single",
+                  dest="single", action="store_true", default=False,
+                  help="play against the program")
+parser.add_option("-t","--timeout",
+                  dest="timeout", default=(TIMEOUT/1000),type="int",
+                  help="timeout in second [default: %default]")
+(options, args) = parser.parse_args()
+
+player_nb = 2
+if options.single:
+    player_nb = 1
+
+app = Main(player_nb)
+app.run(abs(options.timeout)*1000)

@@ -1,0 +1,13 @@
+Source: fanorona
+Section: games
+Priority: optional
+Maintainer: Thierry Randrianiriana <randrianiriana@gmail.com>
+Build-Depends: debhelper (>= 5), python-all-dev (>= 2.3.5), gettext, python-support (>= 0.5.3)
+Standards-Version: 3.7.3
+Homepage: http://thierry.randrianiriana.org/fanorona/
+
+Package: fanorona
+Architecture: all
+Depends: python-numeric, python-pygame, ${python:Depends}, ${misc:Depends}
+Description: board game from Madagascar
+ Fanorona is a malagasy board game. This is the national game from Madagascar.

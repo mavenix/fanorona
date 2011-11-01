@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Fanorona
+GenericName=Fanorona
+Comment=Board game from Madagascar
+Type=Application
+Icon=fanorona
+Exec=fanorona -s
+Categories=Game;BoardGame;

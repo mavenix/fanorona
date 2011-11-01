@@ -1,0 +1,6 @@
+fanorona (@VERSION@~svn@REV@-1) unstable; urgency=low
+
+  * New subversion snapshot @REV@
+  * Initial release (Closes: #441498)
+
+ -- Thierry Randrianiriana <randrianiriana@gmail.com>  @DATE@
