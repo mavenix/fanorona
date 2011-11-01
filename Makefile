@@ -1,5 +1,5 @@
 # $Id: Makefile 57 2008-01-02 07:42:01Z gassla $
-VERSION=0.4.1
+VERSION=0.5
 REPO=`svn info | grep URL | awk '{print $$2}'`
 REV=`cat /tmp/fanorona.revision`
 TMPDIR=/tmp

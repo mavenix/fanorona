@@ -1,15 +1,14 @@
+contact: Thierry Randrianiriaan <randrianiriana@gmail.com>
+licence: GPL-2+
 homepage: http://home.gna.org/fanorona/
 project page: https://gna.org/projects/fanorona/
 stones artwork (button-*-benji_park_01.png) from http://www.openclipart.org
 
 dependencies:
  - python >= 2.4
- - python-numeric
+ - python-numpy
  - python-pygame
 
 optional:
- - subversion
- - subversion-tools
  - devscripts
- - xsltproc (generate ChangeLog from subversion)
  - gettext (generate the compiled files .mo from .po)

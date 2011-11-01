@@ -3,10 +3,10 @@
 
 __author__ = 'Thierry Randrianiriana <randrianiriana@gmail.com>'
 __license__ = 'GNU General Public License version 2 or later'
-__copyright__ = 'Copyright 2007 Thierry Randrianiriana'
+__copyright__ = 'Copyright 2007-2011 Thierry Randrianiriana'
 
 import pygame
-from Numeric import *
+from numpy import *
 from const import *
 from fanorona.Utils import utils
 

@@ -15,7 +15,7 @@ LONG_DESCRIPTION = """Fanorona a board game from Madagascar"""
 CLASSIFIERS = [
     'License :: OSI-Approved Open Source :: GNU General Public License (GPL)',
     'Intended Audience :: by End-User Class :: End Users/Desktop',
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Beta',
     'Topic :: Games/Entertainment :: Board Games',
     'Operating System :: POSIX',
     'Programming Language :: Python',

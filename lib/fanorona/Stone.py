@@ -3,10 +3,10 @@
 
 __author__ = 'Thierry Randrianiriana <randrianiriana@gmail.com>'
 __license__ = 'GNU General Public License version 3 or later'
-__copyright__ = 'Copyright 2007 Thierry Randrianiriana'
+__copyright__ = 'Copyright 2007-2011 Thierry Randrianiriana'
 
 from const import *
-from Numeric import *
+from numpy import *
 from Utils import utils
 
 class Stone:

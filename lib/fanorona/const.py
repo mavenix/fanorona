@@ -6,16 +6,16 @@ from gettext import gettext as _
 
 __author__ = 'Thierry Randrianiriana <randrianiriana@gmail.com>'
 __license__ = 'GNU General Public License Version 3'
-__copyright__ = 'Copyright 2007 Thierry Randrianiriana'
+__copyright__ = 'Copyright 2007-2011 Thierry Randrianiriana'
 
 BASE_DIR	= '/usr/share/games/fanorona/'
 LOCALEDIR       = '/usr/share/locale'
 ICON_DIR        = '/usr/share/pixmaps/fanorona/'
-VERSION 	= '0.3.1'
+VERSION 	= '0.5'
 
 DOMAIN 		= 'fanorona'
 
-COPYRIGHT 	= _('Copyright 2007 Thierry Randrianiriana')
+COPYRIGHT 	= _('Copyright 2007-2011 Thierry Randrianiriana')
 DESCRIPTION   	= _('A board game from Madagascar')
 
 if os.path.isfile('.fanorona_devel'):

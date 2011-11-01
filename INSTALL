@@ -1,6 +1,6 @@
 Fanorona doesn't have to be compiled/installed to run
 but you must install dependencies before, on Debian run:
-$ sudo apt-get install python python-numeric python-pygame
+$ sudo apt-get install python python-numpy python-pygame
 
 To run excute the following in this directory:
 $ PYTHONPATH=lib/ ./fanorona
