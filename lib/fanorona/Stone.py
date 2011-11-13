@@ -64,7 +64,7 @@ class Stone:
 
     def legalMove(self, new_x,new_y):
         can = False
-	if not self.board.stoneExists(new_x,new_y) and not self.history.has_key((new_x,new_y)) :
+        if not self.board.stoneExists(new_x,new_y) and not self.history.has_key((new_x,new_y)) :
             delta_x , delta_y = abs(self.x - new_x) , abs(self.y - new_y)
             if (delta_x == 0 or delta_x == 1) and (delta_y == 0 or delta_y == 1) :
 
@@ -260,7 +260,7 @@ class Stone:
 
         for (xx ,yy) in neib:
             if xx>=0 and xx < self.board.cols and yy >=0 and yy < self.board.rows and self.legalMove(xx,yy) :
-                    return True
+                return True
 
         return False
 

@@ -11,7 +11,7 @@ __copyright__ = 'Copyright 2007-2011 Thierry Randrianiriana'
 BASE_DIR	= '/usr/share/games/fanorona/'
 LOCALEDIR       = '/usr/share/locale'
 ICON_DIR        = '/usr/share/pixmaps/fanorona/'
-VERSION 	= '0.5'
+VERSION 	= '0.6'
 
 DOMAIN 		= 'fanorona'
 

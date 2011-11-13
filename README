@@ -1,8 +1,14 @@
-contact: Thierry Randrianiriaan <randrianiriana@gmail.com>
+contact: Thierry Randrianiriana <randrianiriana@gmail.com>
 licence: GPL-2+
 homepage: http://home.gna.org/fanorona/
-project page: https://gna.org/projects/fanorona/
+source: https://github.com/mavenix/fanorona
+
 stones artwork (button-*-benji_park_01.png) from http://www.openclipart.org
+
+lib/fanorona/menu.py
+http://code.google.com/p/python-pygame-menu-class/
+Copyright 2009 Scott Barlow
+licence: GPL-3
 
 dependencies:
  - python >= 2.4

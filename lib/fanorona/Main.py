@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# $Id: Main.py 55 2008-01-02 07:26:39Z gassla $
 
 __author__ = 'Thierry Randrianiriana <randrianiriana@gmail.com>'
 __license__ = 'GNU General Public License version 2 or later'
 __copyright__ = 'Copyright (C) 2007-2011 Thierry Randrianiriana'
 
+import sys
 from const import *
 import pygame
 import random
@@ -13,6 +13,7 @@ from Board import Board
 from Stone import Stone
 from Player import Player
 from Utils import utils
+from menu import cMenu, EVENT_CHANGE_STATE
 
 import gettext
 gettext.bindtextdomain(DOMAIN,LOCALEDIR)
@@ -21,8 +22,11 @@ _ = gettext.gettext
 
 class Main :
     def __init__(self,player):
+        WINX = 500
+        WINY = 300
+              
         pygame.init()
-        self.screen = pygame.display.set_mode((500, 300))
+        self.screen = pygame.display.set_mode((WINX, WINY))
 
         background = utils.load_image(BOARD_BACKGROUND)
         self.screen.blit(background, (0, 0))
@@ -31,7 +35,7 @@ class Main :
         pygame.display.set_caption('Fanorona')
         icon = utils.load_icon(ICON_32)
         pygame.display.set_icon(icon)
-
+        
     def run(self,timeout):
         TIMEOUT = timeout
 
@@ -73,7 +77,74 @@ class Main :
         winner = None
         status = 'stop'
 
+        #menu
+        menu = cMenu(5, 5, 2, 5, 'vertical', 100, self.screen,
+               [( _('New Game'),  1, None), 
+                ( _('One Player'),  2, None),
+                ( _('Two Players'), 3, None),
+                ( _('Return'),      4, None),
+                ( _('Exit'),        5, None)])
+        menu.set_center(True, True)
+        menu.set_alignment('center', 'center')
+        show_menu = True
+        state = 0
+        prev_state = 1
+        rect_list = []
+
         while 1:
+            if show_menu:
+                # Check if the state has changed, if it has, then post a user event to
+                # the queue to force the menu to be shown at least once
+                if prev_state != state:
+                    pygame.event.post(pygame.event.Event(EVENT_CHANGE_STATE, key = 0))
+                    prev_state = state
+
+                # Get the next event
+                e = pygame.event.wait()
+
+                # Update the menu, based on which "state" we are in - When using the menu
+                # in a more complex program, definitely make the states global variables
+                # so that you can refer to them by a name
+                if e.type == pygame.KEYDOWN or e.type == EVENT_CHANGE_STATE:
+                    if state == 0:
+                        rect_list, state = menu.update(e, state)
+                    elif state == 1:
+                        print 'New Game'
+                        state = 0
+                        board = Board()
+                        board.populate()
+                        status = 'play'
+                        show_menu = False
+                    elif state == 2:
+                        print 'One Player'
+                        state = 0
+                        self.player = 1
+                        show_menu = False
+                    elif state == 3:
+                        print 'Two Players'
+                        self.player = 2
+                        show_menu = False
+                        state = 0
+                    elif state == 4:
+                        print 'Return'
+                        show_menu = False
+                        state = 0
+                    else:
+                        print 'Exit!'
+                        pygame.quit()
+                        sys.exit()
+
+                # Quit if the user presses the exit button
+                if e.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+
+                # Update the screen
+                pygame.display.update(rect_list)
+                
+                if show_menu: 
+                    continue
+            
             #AI
             if self.player == 1 and ai_color == selected and status == 'play':
                 p = Player(board , ai_color)
@@ -86,6 +157,8 @@ class Main :
                 x = y = -1
                 if event.type == QUIT:
                     return
+                elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    show_menu = True
                 elif event.type == MOUSEBUTTONDOWN:
                     m_pos = pygame.mouse.get_pos()
 
