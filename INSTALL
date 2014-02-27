@@ -10,3 +10,5 @@ $ PYTHONPATH=lib/ ./fanorona --single
 
 to specify the timeout in second
 $ PYTHONPATH=lib/ ./fanorona --timeout 120
+
+How to install it on windows http://randrianiriana.wordpress.com/2014/02/27/installer-et-lancer-fanorona/
